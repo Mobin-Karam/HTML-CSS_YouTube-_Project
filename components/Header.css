@@ -5,8 +5,8 @@
   --border-color: #303030;
   --input-bgc: #161616;
   --button-bgc: #252424;
+  --button-bgc-hover: #373636;
 }
-
 
 header {
   width: 100%;
@@ -36,7 +36,7 @@ header div.logo {
 /* == Header Center Box == */
 /* ======================= */
 
-header div.center_box {
+header div#center_box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,51 +44,175 @@ header div.center_box {
 }
 
 /* ====== Microphone  */
-header div.center_box div.microphone {
-  background-color: #;
-
+header div#center_box div.microphone {
+  position: relative;
+  width: 40px;
+  padding: 8px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  border-radius: 50%;
+  background-color: var(--button-bgc);
+  cursor: pointer;
 }
 
-header div.center_box div.microphone img {
+/* Start Hover Title  */
+
+header div#center_box div.microphone:after {
+  display: none;
+  position: absolute;
+  bottom: -60px;
+  width: 140px;
+  padding: 10px 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #cdcdcd;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  content: attr(title);
+}
+
+header div#center_box div.microphone:hover:after {
+  display: block;
+}
+
+/* End Hover Title  */
+
+header div#center_box div.microphone:hover {
+  background-color: var(--button-bgc-hover);
+}
+
+header div#center_box div.microphone img {
   color: #fff;
 }
 
 /* ===== Search Bar  */
-header div.center_box div.search_bar {
+header div#center_box div#search_bar {
   position: relative;
+  width: 620px;
+  height: 40px;
+  padding-left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row-reverse nowrap;
 }
 
-header div.center_box div.search_bar input,
-header div.center_box div.search_bar button {
+
+header div#center_box div#search_bar>img {
+  visibility: hidden;
+}
+
+
+header div#center_box div#search_bar input,
+header div#center_box button {
   border: 1px solid var(--border-color);
 }
 
-header div.center_box div.search_bar input {
-  width: 600px;
+header div#center_box div#search_bar input {
+  width: auto;
   padding: 10px;
   font-size: 16px;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
   outline: 0px;
   background-color: var(--input-bgc);
   color: #fff;
 }
 
-header div.center_box div.search_bar button {
+input#search_bar_input:focus {
+  border: .5px solid #0048ff;
+  width: 620px;
+}
+
+input#search_bar_input:focus~img#search_bar_icon {
+  visibility: visible;
+}
+
+input#search_bar_input:focus+header div#center_box div#search_bar {
+  padding-left: 0px;
+}
+
+/* Search Bar History  */
+header div#center_box div#search_bar ul {
+  display: none;
+  width: 100%;
+}
+
+header div#center_box div#search_bar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 5px 15px;
+  font-weight: 700;
+}
+
+
+header div#center_box div#search_bar ul li img {
+  margin-right: 10px;
+}
+
+header div#center_box div#search_bar ul li:hover {
+  background-color: var(--button-bgc-hover);
+}
+
+header #center_box #search_bar input:focus~ul {
+  list-style: none;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  padding: 0px 15px;
+  bottom: -360px;
+  width: 620px;
+  padding: 20px 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border-radius: 15px;
+  background-color: var(--button-bgc);
+  color: white;
+}
+
+header div#center_box button {
+  position: relative;
+  height: 40px;
+  padding: 0px 20px;
   outline: 0px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: 16px;
   background-color: var(--button-bgc);
   color: #fff;
+  cursor: pointer;
 }
 
+/* Start Hover Title  */
 
+header div#center_box button:after {
+  display: none;
+  position: absolute;
+  left: 0px;
+  bottom: -60px;
+  /* bottom: 0px; */
+  width: 50px;
+  padding: 10px 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #cdcdcd;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  content: attr(title);
+}
 
+header div#center_box button:hover:after {
+  display: block;
+}
+
+/* End Hover Title  */
 
 /* ======================= */
 /* == Header Right Box == */
