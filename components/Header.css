@@ -1,0 +1,95 @@
+/* Header Component */
+
+:root {
+  --container-color: #0d0d0d;
+  --border-color: #303030;
+  --input-bgc: #161616;
+  --button-bgc: #252424;
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  background-color: var(--container-color);
+}
+
+/* ======================= */
+/* == Header Left Box == */
+/* ======================= */
+header div.left_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+/* Logo */
+header div.logo {
+  margin-left: 10px;
+}
+
+/* ======================= */
+/* == Header Center Box == */
+/* ======================= */
+
+header div.center_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+/* ====== Microphone  */
+header div.center_box div.microphone {
+  background-color: #;
+
+}
+
+header div.center_box div.microphone img {
+  color: #fff;
+}
+
+/* ===== Search Bar  */
+header div.center_box div.search_bar {
+  position: relative;
+}
+
+header div.center_box div.search_bar input,
+header div.center_box div.search_bar button {
+  border: 1px solid var(--border-color);
+}
+
+header div.center_box div.search_bar input {
+  width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  outline: 0px;
+  background-color: var(--input-bgc);
+  color: #fff;
+}
+
+header div.center_box div.search_bar button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  padding: 0px 15px;
+  outline: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 16px;
+  background-color: var(--button-bgc);
+  color: #fff;
+}
+
+
+
+
+/* ======================= */
+/* == Header Right Box == */
+/* ======================= */
