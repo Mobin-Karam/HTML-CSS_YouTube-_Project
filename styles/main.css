@@ -1,0 +1,17 @@
+/* Imported Style Component */
+@import "../components/header.css";
+@import "../components/burgermenu.css";
+
+/* Main CSS  */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background-color: #0d0d0d;
+}
