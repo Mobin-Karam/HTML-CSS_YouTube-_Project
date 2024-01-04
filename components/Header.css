@@ -37,6 +37,7 @@ header div.logo {
 /* ======================= */
 
 header div#center_box {
+  width: 660px;
   display: flex;
   align-items: center;
   justify-content: center;
