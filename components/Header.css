@@ -36,7 +36,7 @@ header div.logo {
 /* == Header Center Box == */
 /* ======================= */
 
-header div#center_box {
+#center_box {
   width: 660px;
   display: flex;
   align-items: center;
@@ -44,8 +44,8 @@ header div#center_box {
   flex-flow: row nowrap;
 }
 
-/* ====== Microphone  */
-header div#center_box div.microphone {
+/* #Microphone  */
+header #center_box #microphone {
   position: relative;
   width: 40px;
   padding: 8px;
@@ -61,7 +61,7 @@ header div#center_box div.microphone {
 
 /* Start Hover Title  */
 
-header div#center_box div.microphone:after {
+header #center_box #microphone:after {
   display: none;
   position: absolute;
   bottom: -60px;
@@ -76,24 +76,24 @@ header div#center_box div.microphone:after {
   content: attr(title);
 }
 
-header div#center_box div.microphone:hover:after {
+header #center_box #microphone:hover:after {
   display: block;
 }
 
 /* End Hover Title  */
 
-header div#center_box div.microphone:hover {
+header #center_box #microphone:hover {
   background-color: var(--button-bgc-hover);
 }
 
-header div#center_box div.microphone img {
+header #center_box #microphone img {
   color: #fff;
 }
 
-/* ===== Search Bar  */
-header div#center_box div#search_bar {
+/* ======================== Search Bar  */
+header #center_box #search_bar {
   position: relative;
-  width: 620px;
+  width: 100%;
   height: 40px;
   padding-left: 60px;
   display: flex;
@@ -103,18 +103,18 @@ header div#center_box div#search_bar {
 }
 
 
-header div#center_box div#search_bar>img {
+header #center_box #search_bar>img#search_bar_icon {
   visibility: hidden;
 }
 
 
-header div#center_box div#search_bar input,
-header div#center_box button {
+header #center_box #search_bar input,
+header #center_box button {
   border: 1px solid var(--border-color);
 }
 
-header div#center_box div#search_bar input {
-  width: auto;
+header #center_box #search_bar input {
+  width: 100%;
   padding: 10px;
   font-size: 16px;
   border-bottom-left-radius: 20px;
@@ -126,24 +126,15 @@ header div#center_box div#search_bar input {
 
 input#search_bar_input:focus {
   border: .5px solid #0048ff;
-  width: 620px;
-}
-
-input#search_bar_input:focus~img#search_bar_icon {
-  visibility: visible;
-}
-
-input#search_bar_input:focus+header div#center_box div#search_bar {
-  padding-left: 0px;
 }
 
 /* Search Bar History  */
-header div#center_box div#search_bar ul {
+header #center_box div#search_bar ul {
   display: none;
   width: 100%;
 }
 
-header div#center_box div#search_bar ul li {
+header #center_box div#search_bar ul li {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -154,11 +145,11 @@ header div#center_box div#search_bar ul li {
 }
 
 
-header div#center_box div#search_bar ul li img {
+header #center_box div#search_bar ul li img {
   margin-right: 10px;
 }
 
-header div#center_box div#search_bar ul li:hover {
+header #center_box div#search_bar ul li:hover {
   background-color: var(--button-bgc-hover);
 }
 
@@ -177,7 +168,7 @@ header #center_box #search_bar input:focus~ul {
   color: white;
 }
 
-header div#center_box button {
+header #center_box button {
   position: relative;
   height: 40px;
   padding: 0px 20px;
@@ -192,7 +183,7 @@ header div#center_box button {
 
 /* Start Hover Title  */
 
-header div#center_box button:after {
+header #center_box button:after {
   display: none;
   position: absolute;
   left: 0px;
@@ -209,7 +200,7 @@ header div#center_box button:after {
   content: attr(title);
 }
 
-header div#center_box button:hover:after {
+header #center_box button:hover:after {
   display: block;
 }
 
